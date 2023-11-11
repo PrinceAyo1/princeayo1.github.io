@@ -5,21 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isaac's Web Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#career">Career</a></li>
-          <li><a href="#learning">Learning</a></li>
-          <li><a href="#ambition">Future Ambitions</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="header-content">
+        <div class="name">
+          <h1>Isaac Fabelurin's Portfolio</h1>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com" target="_blank"
+            ><img src="github_icon.png" alt="GitHub"
+          /></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><img src="linkedin_icon.png" alt="LinkedIn"
+          /></a>
+          <a href="https://instagram.com" target="_blank"
+            ><img src="instagram_icon.png" alt="Instagram"
+          /></a>
+          <a href="https://www.codewars.com" target="_blank"
+            ><img src="codewars_icon.png" alt="CodeWars"
+          /></a>
+        </div>
+      </div>
     </header>
 
-    <section id="interests">
+    <section id="navigation">
+      <nav>
+        <ul>
+          <li>
+            <a href="#homepage" class="tab" onclick="openPage('homepage')"
+              >Welcome</a
+            >
+          </li>
+
+          <li>
+            <a href="#about" class="tab" onclick="openPage('about')">About</a>
+          </li>
+          <li>
+            <a href="#career" class="tab" onclick="openPage('career')"
+              >Career</a
+            >
+          </li>
+          <li>
+            <a href="#learning" class="tab" onclick="openPage('learning')"
+              >Learning</a
+            >
+          </li>
+          <li>
+            <a href="#ambition" class="tab" onclick="openPage('ambition')"
+              >Future Ambitions</a
+            >
+          </li>
+
+          <li>
+            <a href="#interests" class="tab" onclick="openPage('interests')"
+              >Interests</a
+            >
+          </li>
+          <li>
+            <a href="#game" class="tab" onclick="openPage('game')">Game</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="homepage">
+      <div class="container">
+        <h1>Welcome</h1>
+        <p>
+          Welcome to my Portfolio website. <br />
+          This is where you can know more about me and the progress on my
+          Software Development journey. <br />
+        </p>
+      </div>
       <div class="carousel-container">
         <h1>My Interests</h1>
         <div id="interests-carousel" class="carousel">
@@ -35,7 +98,7 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" style="height: 100vh" class="animated-bg">
       <div class="container">
         <h1>About Me</h1>
         <p>
@@ -105,6 +168,44 @@
         </ul>
       </div>
     </section>
+
+    <section id="game">
+      <div class="container">
+        <h1>Guess the Alphabet Game (Website Version)</h1>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="carousel-container">
+        <h1>My Interests</h1>
+        <div id="interests-carousel" class="carousel">
+          <img src="the-singer-sq.jpg" alt="Singing" />
+          <img src="the-clergyman-sq.jpg" alt="Clergy" />
+          <img src="bus.jpg" alt="Bus" />
+          <img src="towerBridge.jpg" alt="towerBridge" />
+          <img src="stPauls.jpg" alt="stPauls" />
+          <img src="the-teacher-sq.jpg" alt="teacher" />
+        </div>
+        <span id="prevBtn" class="chevron">&lt;</span>
+        <span id="nextBtn" class="chevron">&gt;</span>
+      </div>
+    </section>
+
+    <div id="main-content" style="padding-left: 200px"></div>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a href="https://linkedin.com" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://instagram.com" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://www.codewars.com" target="_blank"
+        ><i class="fas fa-code"></i
+      ></a>
+    </div>
 
     <footer>
       <div class="container2">

@@ -55,3 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // Flashing effect (change word every 2 seconds)
   setInterval(nextWord, 5000);
 });
+
+function openPage(pageName) {
+  let content = document.getElementById("content");
+  switch (pageName) {
+    case "homepage":
+      content.innerHTML = "<h2>Welcome</h2>";
+      break;
+    case "about":
+      content.innerHTML = "<h2>About</h2>";
+      break;
+    case "career":
+      content.innerHTML = "<h2>Career</h2>";
+      break;
+    case "learning":
+      content.innerHTML = "<h2>Learning</h2>";
+      break;
+    case "ambition":
+      content.innerHTML = "<h2>Future Ambitions</h2>";
+      break;
+
+    case "game":
+      content.innerHTML = "<h2>Game</h2>";
+      break;
+    default:
+      content.innerHTML = "<h2>Welcome</h2>";
+  }
+}
