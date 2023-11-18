@@ -7,11 +7,26 @@
 body {
   font-family: Arial, sans-serif;
 }
-
+h1,
+h2 {
+  font-family: Agbalumo, arial, helvetica;
+}
+h2 {
+  padding-bottom: 20px;
+}
 header {
-  background-color: #b9d9eb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #494545;
   padding: 20px;
   border: 2px solid purple;
+  z-index: 1000; /* Ensures the header is on top of other elements */
+}
+.header {
+  width: calc(100% - 176px);
+  margin-left: 176px;
 }
 
 .header-content {
@@ -29,7 +44,7 @@ header {
 }
 
 .social-icons img {
-  width: 30px; /* Adjust the size of the icons as needed */
+  width: 30px;
   height: 30px;
 }
 
@@ -39,9 +54,14 @@ header {
   left: 0;
   width: 176px;
   height: 100%;
-  background-color: #f1f1f1;
+  background-color: #1f1f1f;
   /* padding-bottom: 100%; */
   /* border: 2px solid red; */
+}
+.nav-banner {
+  width: 75%; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio of the image */
+  margin: 20px; /* Add some space below the image */
 }
 
 #navigation ul {
@@ -57,11 +77,11 @@ header {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #000;
+  color: white;
 }
 
 #navigation a:hover {
-  background-color: #ddd;
+  background-color: #080808;
 }
 #main-content {
   padding-left: 200px;
@@ -69,16 +89,11 @@ header {
 }
 .carousel-container {
   max-width: 800px;
-  padding: 40px;
-
+  padding: 0px;
   text-align: center;
-  margin: 20px auto;
-  border: 2px solid red;
-}
-
-.header {
-  width: calc(100% - 176px);
-  margin-left: 176px;
+  margin: 0px auto;
+  border-radius: 150px;
+  border: #23d5ab solid 2px;
 }
 
 #homepage,
@@ -99,7 +114,7 @@ header {
 }
 
 #homepage {
-  background-color: darkgrey;
+  background-color: whitesmoke;
 }
 #interests {
   background-color: #000;
@@ -111,13 +126,14 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
-  border: 2px solid green;
+  height: 350px;
+  border-radius: 150px;
+  border: 5px solid white;
 }
 
 .carousel img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
   transition: opacity 0.5s ease;
@@ -145,8 +161,47 @@ footer {
   padding: 20px 0;
 }
 
-.container {
+.carousel-container-int {
+  max-width: 800px;
+  padding: 0px;
   text-align: center;
+  margin: 0px auto;
+  border-radius: 150px;
+  border: #23d5ab solid 2px;
+}
+
+.carousel-int {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+  border-radius: 150px;
+  border: 5px solid white;
+}
+
+.carousel-int img {
+  width: 550px;
+  height: 550px; /* Set width and height to the same value for a square */
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%; /* Adjust the border-radius to make it rounded */
+  transition: opacity 0.5s ease;
+}
+
+.container-int {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.chevron-int {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 0 10px;
 }
 
 .carousel2 {
@@ -193,6 +248,19 @@ ol,
 ul {
   text-align: left;
 }
+
+.animated-bg {
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: animatedBackground 10s ease infinite;
+}
+
+.animated-bg-career {
+  background-image: linear-gradient(-45deg, rgb(58, 51, 51), red, gold, white);
+  background-size: 400% 400%;
+  animation: animatedBackground2 10s ease infinite;
+}
+
 @keyframes animatedBackground {
   from {
     background-position: 0 0;
@@ -202,8 +270,20 @@ ul {
   }
 }
 
-.animated-bg {
-  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: animatedBackground 10s ease infinite;
+@keyframes animatedBackground2 {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
