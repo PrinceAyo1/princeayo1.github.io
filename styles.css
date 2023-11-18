@@ -11,8 +11,18 @@ h1,
 h2 {
   font-family: Agbalumo, arial, helvetica;
 }
+h1 {
+  font-size: 40px;
+}
 h2 {
   padding-bottom: 20px;
+  font-size: 35px;
+}
+
+p,
+ol,
+ul {
+  font-size: large;
 }
 header {
   position: fixed;
@@ -21,7 +31,7 @@ header {
   width: 100%;
   background-color: #494545;
   padding: 20px;
-  border: 2px solid purple;
+
   z-index: 1000; /* Ensures the header is on top of other elements */
 }
 .header {
@@ -55,13 +65,12 @@ header {
   width: 176px;
   height: 100%;
   background-color: #1f1f1f;
-  /* padding-bottom: 100%; */
-  /* border: 2px solid red; */
 }
+
 .nav-banner {
-  width: 75%; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio of the image */
-  margin: 20px; /* Add some space below the image */
+  width: 75%;
+  height: auto;
+  margin: 20px;
 }
 
 #navigation ul {
@@ -93,7 +102,6 @@ header {
   text-align: center;
   margin: 0px auto;
   border-radius: 150px;
-  border: #23d5ab solid 2px;
 }
 
 #homepage,
@@ -106,7 +114,6 @@ header {
   height: 100vh;
   width: calc(100% - 176px);
   margin-left: 176px;
-  border: 2px solid green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +122,13 @@ header {
 
 #homepage {
   background-color: whitesmoke;
+}
+
+#learning {
+  background-color: rgb(202, 179, 202);
+}
+#ambition {
+  background-color: rgb(237, 236, 234);
 }
 #interests {
   background-color: #000;
@@ -128,7 +142,7 @@ header {
   width: 100%;
   height: 350px;
   border-radius: 150px;
-  border: 5px solid white;
+  border: 12px solid white;
 }
 
 .carousel img {
@@ -145,10 +159,12 @@ header {
   padding: 40px;
   text-align: center;
 }
+
+.chevron-int,
 .chevron {
-  font-size: 24px;
+  font-size: 50px;
   cursor: pointer;
-  color: #333;
+  color: white;
   padding: 0 10px;
 }
 
@@ -167,7 +183,6 @@ footer {
   text-align: center;
   margin: 0px auto;
   border-radius: 150px;
-  border: #23d5ab solid 2px;
 }
 
 .carousel-int {
@@ -178,15 +193,15 @@ footer {
   width: 100%;
   height: 550px;
   border-radius: 150px;
-  border: 5px solid white;
+  border: 12px solid white;
 }
 
 .carousel-int img {
   width: 550px;
-  height: 550px; /* Set width and height to the same value for a square */
+  height: 550px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 50%; /* Adjust the border-radius to make it rounded */
+  border-radius: 150px;
   transition: opacity 0.5s ease;
 }
 
@@ -195,13 +210,6 @@ footer {
   margin: 0 auto;
   padding: 40px;
   text-align: center;
-}
-
-.chevron-int {
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-  padding: 0 10px;
 }
 
 .carousel2 {
@@ -285,5 +293,138 @@ ul {
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 20px 0px 0px;
+}
+#inspiration-carousel {
+  padding-bottom: 20px;
+}
+
+/* Media query for smaller screens (tablets and phones) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p,
+  ol,
+  ul {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .header {
+    width: 74%;
+    margin-left: 26%;
+  }
+
+  #navigation {
+    width: 26%;
+  }
+
+  .nav-banner {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  p,
+  ol,
+  ul {
+    font-size: 10px;
+  }
+
+  header {
+    padding: 5px;
+  }
+
+  .header {
+    width: 74%;
+    margin-left: 26%;
+  }
+
+  #navigation {
+    width: 26%;
+  }
+
+  .nav-banner {
+    width: 75%;
+  }
+  .carousel-container {
+    display: none;
+  }
+  .carousel-container-int {
+    width: 200px;
+    padding: 0px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  .carousel-int {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel-int img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 150px;
+    transition: opacity 0.5s ease;
+  }
+
+  .container-int {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+
+  #homepage,
+  #interests,
+  #about,
+  #career,
+  #learning,
+  #ambition,
+  #game {
+    height: 100vh;
+    width: calc(74%);
+    margin-left: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

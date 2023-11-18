@@ -126,7 +126,13 @@ function openPage(pageName) {
     case "game":
       content.innerHTML = "<h2>Game</h2>";
       break;
+
+    case "container2":
+      content.innerHTML = "<h2>Inspiration</h2>";
+      break;
     default:
       content.innerHTML = "<h2>Welcome</h2>";
   }
 }
+const year = document.querySelector("#current-year");
+year.innerHTML = new Date().getFullYear();
